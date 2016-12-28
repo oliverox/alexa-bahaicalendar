@@ -1,0 +1,22 @@
+{
+  "name": "alexa-bahaicalendar",
+  "version": "0.0.1",
+  "description": "Alexa skillset for Baha'i calendar",
+  "main": "index.js",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6",
+    "moment": "^2.17.1",
+    "moment-timezone": "^0.5.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alexa",
+    "bahai",
+    "calendar"
+  ],
+  "author": "Oliver Oxenham",
+  "license": "ISC"
+}
