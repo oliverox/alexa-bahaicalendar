@@ -7,7 +7,7 @@ const Alexa = require('alexa-sdk');
 const moment = require('moment');
 const badiDate = require('./lib/badi/badiDate.js');
 
-const APP_ID = undefined;
+const APP_ID = 'amzn1.ask.skill.bbf6d4ac-53c8-4c84-a784-32b6c81b55e3';
 const badiDatesOfMonth = {
   '1': '1st',
   '2': '2nd',
@@ -31,10 +31,14 @@ const badiDatesOfMonth = {
 }
 
 const handlers = {
+    'LaunchRequest': function() {
+      this.emit(':ask', 'Allow-wob-ha! What are you interested to find out from the Bahá\'í calendar?', 'Please say that again?');
+    },
+
     'GetTodayIntent': function() {
       const today = moment(),
             badiToday = badiDate(today);
-      this.emit(':tellWithCard', 'Today is the ' + badiDatesOfMonth[badiToday.format('d').toString()] + ' day of the month of ' + badiToday.format('MML') + ' of the year ' + badiToday.format('y') + ' of the Bahai era');
+      this.emit(':tellWithCard', 'Today is the ' + badiDatesOfMonth[badiToday.format('d').toString()] + ' day of the month of ' + badiToday.format('MML') + ' of the year ' + badiToday.format('y'));
     },
 
     'GetNextFeastIntent': function() {
@@ -51,7 +55,7 @@ const handlers = {
         newBadiDay = badiDate(curDay);
         newBahaiMonth = newBadiDay.badiMonth() > currentBahaiMonth;
       }
-      this.emit(':tellWithCard', 'The next Baha\'i month, ' + newBadiDay.format('MML') + ', starts at sunset on ' + prevDay.format('dddd MMMM Do YYYY'));
+      this.emit(':tellWithCard', 'The next Bahá\'í month, ' + newBadiDay.format('MML') + ', starts at sunset on ' + prevDay.format('dddd MMMM Do YYYY'));
     },
 
     'GetNextHolyDay': function() {
@@ -61,7 +65,7 @@ const handlers = {
       while (!badiDay.holyDayNumber()) {
         badiDay = badiDate(day.add(1, 'day'));
       }
-      this.emit(':tellWithCard', 'The next Baha\'i Holy Day is ' + badiDay.holyDay() + ' and starts at sunset on ' + day.subtract(1, 'day').format('dddd MMMM Do YYYY'));
+      this.emit(':tellWithCard', 'The next Bahá\'í Holy Day is ' + badiDay.holyDay() + ' and starts at sunset on ' + day.subtract(1, 'day').format('dddd MMMM Do YYYY'));
     }
 };
 

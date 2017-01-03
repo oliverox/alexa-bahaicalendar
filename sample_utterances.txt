@@ -1,0 +1,80 @@
+GetNextFeastIntent the next feast is
+GetNextFeastIntent when the next feast is
+GetNextFeastIntent give me the next feast
+GetNextFeastIntent give me the next feast date
+GetNextFeastIntent give the next feast
+GetNextFeastIntent give the next feast date
+GetNextFeastIntent next feast
+GetNextFeastIntent next feast date
+GetNextFeastIntent when is the next feast
+GetNextFeastIntent when is the next feast date
+GetNextFeastIntent I want the next feast
+GetNextFeastIntent I want the next feast date
+GetNextFeastIntent get next feast
+GetNextFeastIntent get next feast date
+GetNextFeastIntent get the next feast
+GetNextFeastIntent get the next feast date
+GetTodayIntent today is
+GetTodayIntent day is it
+GetTodayIntent day is it today
+GetTodayIntent the day today
+GetTodayIntent the current day
+GetTodayIntent the current date
+GetTodayIntent what day is it
+GetTodayIntent what day it is today
+GetTodayIntent what day it is
+GetTodayIntent what day is today
+GetTodayIntent what is today
+GetTodayIntent what's the day today
+GetTodayIntent what day is it today
+GetTodayIntent what the day is today
+GetTodayIntent give me today's date
+GetTodayIntent give today's date
+GetTodayIntent today
+GetTodayIntent today's date
+GetTodayIntent I want today's date
+GetTodayIntent I want to know today's date
+GetTodayIntent get today's date
+GetTodayIntent get me today's date
+GetTodayIntent give me the date for today
+GetTodayIntent the date for today
+GetTodayIntent when is today
+GetTodayIntent get me today's date
+GetNextHolyDay next holy day
+GetNextHolyDay next holy day is
+GetNextHolyDay holy day
+GetNextHolyDay the next holy day
+GetNextHolyDay when is the next holy day
+GetNextHolyDay when is the day of the next holy day
+GetNextHolyDay when is the holy day
+GetNextHolyDay give me the next holy day
+GetNextHolyDay give me the date for the next holy day
+GetNextHolyDay the date for the next holy day
+GetNextHolyDay the day of the next holy day
+GetNextHolyDay I want to know the next holy day
+GetNextHolyDay I want to know what the next holy day is
+GetNextHolyDay I want to know when the next holy day is
+GetNextHolyDay I want to know when the next holy day falls on
+GetNextHolyDay I want the next holy day
+GetNextHolyDay I want the day of the next holy day
+GetNextHolyDay what is the next holy day
+GetNextHolyDay day of the next holy day
+GetNextHolyDay next bahai holy day
+GetNextHolyDay next bahai holy day is
+GetNextHolyDay bahai holy day
+GetNextHolyDay the next bahai holy day
+GetNextHolyDay when is the next bahai holy day
+GetNextHolyDay when is the day of the next bahai holy day
+GetNextHolyDay when is the bahai holy day
+GetNextHolyDay give me the next bahai holy day
+GetNextHolyDay give me the date for the next bahai holy day
+GetNextHolyDay the date for the next bahai holy day
+GetNextHolyDay the day of the next bahai holy day
+GetNextHolyDay I want to know the next bahai holy day
+GetNextHolyDay I want to know what the next bahai holy day is
+GetNextHolyDay I want to know when the next bahai holy day is
+GetNextHolyDay I want to know when the next bahai holy day falls on
+GetNextHolyDay I want the next bahai holy day
+GetNextHolyDay I want the day of the next bahai holy day
+GetNextHolyDay what is the next bahai holy day
+GetNextHolyDay day of the next bahai holy day
