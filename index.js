@@ -34,8 +34,9 @@ const handlers = {
     'LaunchRequest': function() {
       this.emit(':ask', `
         Allow-wob-ha! What are you interested to find out from the Bahá'í
-        calendar? For example, you can check when the date the next feast falls
-        on or the next holy day.`, `Please say that again?`
+        calendar? 
+        For example, you can check when the date the next feast falls
+        on, or when the next holy day is.`, `Please say that again?`
       );
     },
 
