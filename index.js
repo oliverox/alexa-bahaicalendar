@@ -34,9 +34,9 @@ const handlers = {
     'LaunchRequest': function() {
       this.emit(':ask', `
         Allow-wob-ha! What are you interested to find out from the Bahá'í
-        calendar? 
-        For example, you can check when the date the next feast falls
-        on, or when the next holy day is.`, `Please say that again?`
+        calendar?
+        For example, you can ask for the date of the next feast, or when the
+        next holy day is.`, `Please say that again?`
       );
     },
 
@@ -44,8 +44,8 @@ const handlers = {
       const today = moment(),
             badiToday = badiDate(today);
       this.emit(':tellWithCard', `
-        Today is the ${badiDatesOfMonth[badiToday.format('d').toString()]} day
-        of the month of ${badiToday.format('MML')} of the year
+        Today is the ${badiDatesOfMonth[badiToday.format('d').toString()]} day,
+        of the month of ${badiToday.format('MML')}, of the year
         ${badiToday.format('y')}`
       );
     },
@@ -78,16 +78,17 @@ const handlers = {
         badiDay = badiDate(day.add(1, 'day'));
       }
       this.emit(':tellWithCard', `
-        The next Bahá'í Holy Day is ${badiDay.holyDay()} and starts at sunset on
-        ${day.subtract(1, 'day').format('dddd MMMM Do YYYY')}`
+        The next Bahá'í Holy Day is ${badiDay.holyDay()}, and starts at sunset
+        on ${day.subtract(1, 'day').format('dddd MMMM Do YYYY')}`
       );
     },
 
     'AMAZON.HelpIntent': function() {
-      this.emit(':tellWithCard', `
-        You can query the Bahá'í Calendar for the date of the next feast,
-        the next holy day, or today's date. Additional features will be added
-        over time. Thank you for using the Bahá'í Calendar skill.`
+      this.emit(':ask', `
+        Thank you for using the Bahá'í Calendar skill. You can query the Bahá'í
+        calendar for the date of the next feast, the next holy day, or today's
+        date. Additional features will be added over time.
+        What would you like me to find out?`
       );
     }
 };
