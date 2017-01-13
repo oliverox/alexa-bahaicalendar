@@ -32,13 +32,21 @@ const badiDatesOfMonth = {
 
 const handlers = {
     'LaunchRequest': function() {
-      this.emit(':ask', 'Allow-wob-ha! What are you interested to find out from the Bahá\'í calendar?', 'Please say that again?');
+      this.emit(':ask', `
+        Allow-wob-ha! What are you interested to find out from the Bahá'í
+        calendar? For example, you can check when the date the next feast falls
+        on or the next holy day.`, `Please say that again?`
+      );
     },
 
     'GetTodayIntent': function() {
       const today = moment(),
             badiToday = badiDate(today);
-      this.emit(':tellWithCard', 'Today is the ' + badiDatesOfMonth[badiToday.format('d').toString()] + ' day of the month of ' + badiToday.format('MML') + ' of the year ' + badiToday.format('y'));
+      this.emit(':tellWithCard', `
+        Today is the ${badiDatesOfMonth[badiToday.format('d').toString()]} day
+        of the month of ${badiToday.format('MML')} of the year
+        ${badiToday.format('y')}`
+      );
     },
 
     'GetNextFeastIntent': function() {
@@ -55,7 +63,10 @@ const handlers = {
         newBadiDay = badiDate(curDay);
         newBahaiMonth = newBadiDay.badiMonth() > currentBahaiMonth;
       }
-      this.emit(':tellWithCard', 'The next Bahá\'í month, ' + newBadiDay.format('MML') + ', starts at sunset on ' + prevDay.format('dddd MMMM Do YYYY'));
+      this.emit(':tellWithCard', `
+        The next Bahá'í month, ${newBadiDay.format('MML')}, starts at sunset on
+        ${prevDay.format('dddd MMMM Do YYYY')}`
+      );
     },
 
     'GetNextHolyDay': function() {
@@ -65,7 +76,18 @@ const handlers = {
       while (!badiDay.holyDayNumber()) {
         badiDay = badiDate(day.add(1, 'day'));
       }
-      this.emit(':tellWithCard', 'The next Bahá\'í Holy Day is ' + badiDay.holyDay() + ' and starts at sunset on ' + day.subtract(1, 'day').format('dddd MMMM Do YYYY'));
+      this.emit(':tellWithCard', `
+        The next Bahá'í Holy Day is ${badiDay.holyDay()} and starts at sunset on
+        ${day.subtract(1, 'day').format('dddd MMMM Do YYYY')}`
+      );
+    },
+
+    'AMAZON.HelpIntent': function() {
+      this.emit(':tellWithCard', `
+        You can query the Bahá'í Calendar for the date of the next feast,
+        the next holy day, or today's date. Additional features will be added
+        over time. Thank you for using the Bahá'í Calendar skill.`
+      );
     }
 };
 

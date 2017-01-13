@@ -1,4 +1,5 @@
 GetNextFeastIntent the next feast is
+GetNextFeastIntent the next feast date
 GetNextFeastIntent when the next feast is
 GetNextFeastIntent give me the next feast
 GetNextFeastIntent give me the next feast date
